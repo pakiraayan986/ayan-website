@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Madam Ji ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Trebuchet MS",Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffd6e7,#ffeef5,#ffd1dc);
+    color:#8d3154;
+}
+
+.page{
+    display:none;
+    min-height:100vh;
+    padding:25px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.page.active{
+    display:flex;
+    animation:show .7s ease;
+}
+
+@keyframes show{
+    from{
+        opacity:0;
+        transform:scale(.9) translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+.card{
+    width:min(92%,650px);
+    padding:35px 25px;
+    border-radius:35px;
+    background:rgba(255,255,255,.65);
+    box-shadow:0 15px 45px rgba(180,70,110,.18);
+    backdrop-filter:blur(12px);
+}
+
+.teddy{
+    font-size:90px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    50%{transform:translateY(-12px) rotate(3deg)}
+}
+
+h1{
+    font-size:clamp(35px,9vw,60px);
+    margin:12px 0;
+}
+
+h2{
+    font-size:35px;
+    margin-bottom:18px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.7;
+    margin:15px 0;
+}
+
+button{
+    border:0;
+    padding:14px 25px;
+    margin:8px;
+    border-radius:30px;
+    background:#ff6f9f;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 7px 18px rgba(255,90,140,.25);
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.box{
+    background:#fff;
+    margin:12px 0;
+    padding:16px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    pointer-events:none;
+    animation:heartUp linear forwards;
+}
+
+@keyframes heartUp{
+    from{
+        transform:translateY(0) rotate(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+.typing{
+    min-height:30px;
+    font-weight:bold;
+}
+
+#answer{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.bigLove{
+    font-size:100px;
+    animation:pulse 1.3s infinite;
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.18)}
+}
+
+.love-letter{
+    background:#fff;
+    padding:22px;
+    border-radius:22px;
+    line-height:1.8;
+    text-align:left;
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+
+<div class="card">
+
+<div class="teddy">🧸</div>
+
+<h1>Hello Madam Ji 🌸</h1>
+
+<p class="typing" id="typing"></p>
+
+<p>
+একটা ছোট্ট কথা ছিল...  
+কিন্তু বলতে গেলে একটু লজ্জা লাগে 🙈❤️
+</p>
+
+<button onclick="nextPage()">
+Madam Ji, ভিতরে আসুন 💕
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+
+<div class="card">
+
+<h2>🌷 Madam Ji সম্পর্কে</h2>
+
+<div class="box">
+🌸 Madam Ji হাসলে → দিন সুন্দর
+</div>
+
+<div class="box">
+😊 Madam Ji কথা বললে → mood ভালো
+</div>
+
+<div class="box">
+💕 Madam Ji রাগ করলে → বিপদ
+</div>
+
+<div class="box">
+😂 Madam Ji “হুম” বললে → ১০০টা প্রশ্ন মাথায়
+</div>
+
+<p>
+Conclusion: Madam Ji একটু বেশি special! 😌❤️
+</p>
+
+<button onclick="nextPage()">
+আরও একটু দেখি 👀
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+
+<div class="card">
+
+<h2>😜 Madam Ji Quiz</h2>
+
+<p>
+একটা important question আছে...
+</p>
+
+<p>
+<strong>Madam Ji কি একটু cute? 🥺</strong>
+</p>
+
+<button onclick="yesAnswer()">
+হ্যাঁ 😌❤️
+</button>
+
+<button id="noBtn" onmouseover="moveNo()">
+না 😐
+</button>
+
+<div id="answer"></div>
+
+<br>
+
+<button onclick="nextPage()">
+Next 💗
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+
+<div class="card">
+
+<h2>🌙 কিছু ছোট্ট কথা</h2>
+
+<div class="box">
+☕ তোমার সাথে কথা বললে সময়টা একটু দ্রুত চলে যায়।
+</div>
+
+<div class="box">
+🌸 তোমার একটা হাসি অনেক কিছু ঠিক করে দিতে পারে।
+</div>
+
+<div class="box">
+💬 তোমার একটা message দেখলেই মুখে অজান্তেই smile আসে।
+</div>
+
+<div class="box">
+🧸 আর হ্যাঁ... তুমি একটু বেশি adorable!
+</div>
+
+<p>
+এই pageটা এখানেই শেষ...
+কিন্তু আসল কথাটা এখনও বাকি। 👀💕
+</p>
+
+<button onclick="nextPage()">
+শেষের কথাটা শুনবে? 💌
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+
+<div class="card">
+
+<div class="bigLove">💖</div>
+
+<h2>For You, Madam Ji</h2>
+
+<div class="love-letter">
+
+<p>
+প্রিয় Madam Ji,
+</p>
+
+<p>
+জানি না এই ছোট্ট website দেখে
+তুমি হাসবে নাকি আমাকে বকা দেবে। 😅
+</p>
+
+<p>
+কিন্তু একটা কথা সত্যি—
+তোমাকে একটু হাসানোর জন্য
+এই পুরো আয়োজন। 🌸
+</p>
+
+<p>
+তুমি সবসময় এমনই cute থেকো,
+আর তোমার হাসিটা কখনো হারিয়ে যেও না। ❤️
+</p>
+
+<p>
+কারণ তোমার হাসি সত্যিই খুব সুন্দর। 🥰
+</p>
+
+<p style="text-align:center;font-size:25px;">
+<strong>Madam Ji, You Are Special. 💕</strong>
+</p>
+
+</div>
+
+<button onclick="magic()">
+✨ Magic Button ✨
+</button>
+
+<p id="magicText"></p>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+let page=1;
+
+
+/* PAGE CHANGE */
+
+function nextPage(){
+
+    if(page < 5){
+
+        document.getElementById("page"+page)
+        .classList.remove("active");
+
+        page++;
+
+        document.getElementById("page"+page)
+        .classList.add("active");
+
+    }
+
+}
+
+
+/* TYPING EFFECT */
+
+let text="আজকে শুধু Madam Ji-এর জন্য একটা ছোট্ট surprise... 💕";
+let i=0;
+
+function typeText(){
+
+    if(i < text.length){
+
+        document.getElementById("typing")
+        .innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeText,55);
+
+    }
+
+}
+
+typeText();
+
+
+
+/* YES BUTTON */
+
+function yesAnswer(){
+
+    document.getElementById("answer").innerHTML=
+    "আমি জানতাম! 😌❤️ Madam Ji নিজেই confession করে ফেললেন! 😂";
+
+    for(let i=0;i<12;i++){
+        setTimeout(createHeart,i*100);
+    }
+
+}
+
+
+
+/* NO BUTTON */
+
+function moveNo(){
+
+    const btn=document.getElementById("noBtn");
+
+    btn.style.position="fixed";
+
+    btn.style.left=
+    Math.random()*70+15+"%";
+
+    btn.style.top=
+    Math.random()*70+15+"%";
+
+}
+
+
+
+/* FLOATING HEARTS */
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="heart";
+
+    const emojis=[
+        "❤️","💕","💖","💗","💘","🌸","✨","🧸"
+    ];
+
+    heart.innerHTML=
+    emojis[Math.floor(Math.random()*emojis.length)];
+
+    heart.style.left=
+    Math.random()*100+"vw";
+
+    heart.style.fontSize=
+    18+Math.random()*28+"px";
+
+    heart.style.animationDuration=
+    4+Math.random()*4+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+
+}
+
+setInterval(createHeart,500);
+
+
+
+/* FINAL MAGIC */
+
+function magic(){
+
+    document.getElementById("magicText").innerHTML=
+    "💖 Madam Ji, আজকের দিনের official title: YOU ARE SPECIAL! 🌸🧸❤️";
+
+    for(let i=0;i<50;i++){
+
+        setTimeout(createHeart,i*60);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আর কখনো রাগ করো না ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page final">
+
+    <div class="heart">🥺❤️</div>
+
+    <h1>আর কখনো রাগ করো না</h1>
+
+    <p>
+        Please Madam... 🥺
+    </p>
+
+    <p>
+        Amar upor rag hole amake bolo,
+        kintu chup kore dure theko na।
+    </p>
+
+    <div class="box">
+        তোমার একটা হাসি আমার কাছে
+        হাজারটা কথার থেকেও বেশি। ❤️
+    </div>
+
+    <p class="big">
+        Ektu hese dao Madam... 🥺❤️
+    </p>
+
+    <button onclick="forgive()">Rag Komeche? ❤️</button>
+
+    <div id="love"></div>
+
+</div>
+
+<script>
+function forgive(){
+    document.getElementById("love").innerHTML =
+    "Yeee! ❤️🥺<br>Thank You Madam!<br>আর কখনো রাগ করো না ❤️";
+
+    for(let i=0;i<30;i++){
+        const h=document.createElement("span");
+        h.innerHTML="❤️";
+        h.className="floating";
+        h.style.left=Math.random()*100+"%";
+        h.style.animationDuration=2+Math.random()*4+"s";
+        document.body.appendChild(h);
+    }
+}
+</script>
+
+</body>
+</html>

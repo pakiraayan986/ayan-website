@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madam ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+    <div class="heart">❤️</div>
+
+    <h1>Madam... 🥺</h1>
+
+    <p>
+        Jani tumi amar upor rag kore acho...
+        kintu please amar sathe rag kore theko na. ❤️
+    </p>
+
+    <p class="big">Ektu hasho na Madam ji ! 🥺❤️</p>
+
+    <a href="page2.html" class="btn">Next ❤️</a>
+</div>
+
+<script>
+function hearts(){
+    const h=document.createElement("span");
+    h.innerHTML="❤️";
+    h.className="floating";
+    h.style.left=Math.random()*100+"%";
+    h.style.animationDuration=3+Math.random()*4+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+}
+setInterval(hearts,500);
+</script>
+</body>
+</html>
